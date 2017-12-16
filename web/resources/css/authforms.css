@@ -1,0 +1,82 @@
+.ui-layout-unit{
+    position: relative;
+    
+}
+            
+.ui-layout-unit-content {
+    /*background-color: #3498DB;*/
+    background-image: url(images/fon.jpg);
+}
+
+.ui-panel {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 500px;
+    border-radius: 6px;
+    border: hidden;
+    
+}
+
+.ui-panelgrid {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 400px;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    
+   
+    
+    
+}
+
+.ui-panelgrid .ui-widget-content {
+    background: #FFF;
+    /*background: transparent;*/
+}
+            
+.ui-widget-content .ui-inputfield {
+    text-align: left;
+    background-color: #FFF;
+    box-shadow: none;
+    width: 380px;
+    border-color: black;
+}
+            
+.ui-panelgrid>*>tr,
+.ui-panelgrid .ui-panelgrid-cell {
+    border-style: hidden;
+    text-align: center;
+    padding: 10px 20px;
+    
+}
+
+.ui-button {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    width: 380px;
+    
+}
+            
+            
+.ui-state-default, .ui-widget-content .ui-state-default {
+    text-shadow: none;
+    background-image: none;
+    border: 1px solid activeborder;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400; 
+
+}
+

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <h:outputStylesheet library="css" name="authforms.css"/>
+        <title>Registration form</title>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="center">
+
+                <h:form id="RegistrationForm"> 
+                    
+                    <p:growl id="growl" showDetail="true"/>
+                    
+                    <p:panel id="display">    
+                        <p:panelGrid>  
+                            <p:row>
+                                <p:column colspan="2" style="font-weight: bold; font-size: 20px;">Registration</p:column>
+                            </p:row>
+                            <p:row style="height: 20px;"/>   
+                            <p:row>
+                                <p:column colspan="2"><p:inputText id="email" value="#{registrationController.email}" placeholder="Email" required="true"/></p:column>
+                            </p:row>
+
+                            <p:row>
+                                <p:column colspan="2"><p:password id="password" value="#{registrationController.password}" placeholder="Password" required="true"/></p:column>
+                            </p:row>
+
+                            <p:row>
+                                <p:column colspan="2"><p:commandButton id="button" value="Register" action="#{registrationController.userRegistration()}" update="growl, :RegistrationForm:display" style="background-color: #1d8ce0; font-weight: normal; color: #ffffff; text-decoration: none;"/></p:column>
+                            </p:row>
+
+                            <p:row>
+                                <p:column colspan="2">
+                                    <h:outputText value="Already have an account?"/>  
+                                    <p:link outcome="index">
+                                        <h:outputText value=" Log In" style="color: #1d8ce0;"/>
+                                    </p:link>  
+                                </p:column>
+                            </p:row> 
+
+                        </p:panelGrid>
+
+                    </p:panel>
+                </h:form>
+
+
+            </p:layoutUnit>
+        </p:layout>    
+    </h:body>
+</html>
