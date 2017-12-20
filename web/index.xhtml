@@ -5,7 +5,7 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <h:outputStylesheet library="css" name="authforms.css"/>
+            <h:outputStylesheet library="css" name="authforms.css"/>
         <title>Authorization form</title>
     </h:head>
     <h:body>
@@ -14,43 +14,67 @@
 
                 <h:form> 
                     
-                    <p:growl id="growl" showDetail="true" sticky="true" /> 
-                    
-                    <p:panel>    
-                        <p:panelGrid>  
-                            <p:row>
-                                <p:column colspan="2" style="font-weight: bold; font-size: 20px;">Login</p:column>
-                            </p:row>
-                            <p:row style="height: 20px;"/>   
-                            <p:row>
-                                <p:column colspan="2"><p:inputText id="email" value="#{loginController.email}" placeholder="Email" required="true"/></p:column>
-                            </p:row>
-
-                            <p:row>
-                                <p:column colspan="2"><p:password id="password" value="#{loginController.password}" placeholder="Password" feedback="false" required="true"/></p:column>
-                            </p:row>
-
-                            <p:row>
-                                <p:column colspan="2"><p:commandButton id="button" value="Login" action="#{loginController.buttonAction()}" ajax="false" style="background-color: #1d8ce0; font-weight: normal; color: #ffffff; text-decoration: none;"/></p:column>
-                            </p:row>
-
-                            <p:row>
-                                <p:column style="width: 50%;">
-                                    <p:link outcome="passrecovery">
-                                        <h:outputText value="Forgot your password?" style="font-size: 14px;"/>
-                                    </p:link>  
-                                </p:column>
-
-                                <p:column style="width: 50%;">
-                                    <p:link outcome="registration">
-                                        <h:outputText value="Registration" style="font-size: 14px;"/>
-                                    </p:link>  
-                                </p:column>
-                            </p:row> 
-
-                        </p:panelGrid>
-
+                    <p:panel>                    
+                      
+                        <p:panelGrid id="grid" columns="1">  
+                                
+                            
+                            <p:outputLabel value="Login"/> 
+                            
+                            <p:toolbar style="background-color: transparent; border:none;">
+                                
+                                
+                                <f:facet name="left">
+                            <p:inputText id="email" value="#{loginController.email}" placeholder="Email" required="true" style="border-color: background;"/>
+                                </f:facet>
+                                <f:facet name="right">
+                                    <p:message for="email" display="icon"/>
+                                </f:facet>
+                            </p:toolbar>
+                            
+                           <p:toolbar style="background-color: transparent; border: none;">
+                                <f:facet name="left">
+                                <p:password id="password" value="#{loginController.password}" placeholder="Password" feedback="false" required="true" style="border-color: background;"/>
+                               </f:facet>
+                               <f:facet name="right">
+                                <p:message for="password" display="icon" />
+                               </f:facet>
+                            </p:toolbar>
+                       
+                        
+                        
+                               <p:toolbar style="background-color: transparent; border: none;">
+                                <f:facet name="left">
+                                       <p:commandButton  id="button" value="Login" action="#{loginController.buttonAction()}" ajax="false" style="background-color: #1d8ce0; font-weight: normal; color: #ffffff; text-decoration: none;"/>
+                                 </f:facet>
+                            </p:toolbar>  
+                                
+                                
+                        
+                           
+                                    <p:toolbar style="background-color: transparent; border: none; "> 
+                                        <f:facet name="left">
+                                            <p:link outcome="passrecovery" style="margin-left: 20px;">
+                                    <h:outputText value="Forgot your password?" style="font-size: 14px;"/>
+                                </p:link>  
+                                        </f:facet>
+                                        <f:facet name="right">
+                                
+                                <p:link outcome="registration" style="margin-right: 43px;">
+                                    <h:outputText value="Registration" style="font-size: 14px;"/>
+                                </p:link>
+                                        </f:facet>
+                                    </p:toolbar>   
+                        
+                        </p:panelGrid>       
+                                
+                           
+                                
+                                    
+                       
                     </p:panel>
+
+                    
                 </h:form>
 
 

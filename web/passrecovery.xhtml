@@ -22,14 +22,14 @@
                         <p:panelGrid>
 
                             <p:row>
-                                <p:column colspan="2" style="font-weight: bold; font-size: 20px;">Password recovery</p:column>
+                                <p:column colspan="2" style="font-weight: bold; font-size: 20px;">Login or password was wrong! Recover password?</p:column>
                             </p:row>
                             <p:row>
                                 <p:column colspan="2" style="height: 50px;"/>
                             </p:row>
                             
                             <p:row>
-                                <p:column colspan="2"><p:inputText id="email" value="#{passwordController.email}" placeholder="Please enter email" required="true"/></p:column>
+                                <p:column colspan="2"><p:inputText id="email" value="#{passwordController.email}" placeholder="Please enter email" required="true" style="border-color: background;"/></p:column>
                             </p:row>
                             
                             <p:row>
@@ -40,7 +40,7 @@
                                 <p:column colspan="2">
                                     <p:toolbar style="background-color: transparent; border: none;">
                                         <f:facet name="left">
-                                            <p:button id="cancel" value="Cancel" outcome="index" style="width: 100px; background-color: transparent; "/>
+                                            <p:button id="cancel" value="Back" outcome="index" style="width: 100px; background-color: transparent; border-color: background; "/>
                                         </f:facet>    
                                         <f:facet name="right">    
                                             <p:commandButton id="button" value="Send" action="#{passwordController.sendPassword()}" style="width: 100px; background-color: #3498DB; font-weight: normal; color: #ffffff; text-decoration: none;"/>

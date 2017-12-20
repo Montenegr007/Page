@@ -48,15 +48,16 @@
     text-align: left;
     background-color: #FFF;
     box-shadow: none;
-    width: 380px;
+    width: 290px;
     border-color: black;
+    margin-left: 20px;
 }
             
 .ui-panelgrid>*>tr,
 .ui-panelgrid .ui-panelgrid-cell {
     border-style: hidden;
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     
 }
 
@@ -66,7 +67,8 @@
     border-radius: 3px;
     font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
-    width: 380px;
+    width: 307px;
+    margin-left: 20px;
     
 }
             
@@ -78,5 +80,11 @@
     font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400; 
 
+}
+
+.ui-message-error {
+    margin: 5px 5px;
+    background-color: red;
+    
 }
 
